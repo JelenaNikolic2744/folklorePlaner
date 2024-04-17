@@ -1,0 +1,19 @@
+table{
+    height: 50px;
+    width: 800px;
+    border: 2px black solid;
+    position: relative;
+    margin: 0 auto;
+}
+
+th{
+    width: 200px;
+    border: 2px black solid;
+    padding: 5px;
+    text-decoration: solid;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-alert
+        [message]="messageError"
+        *ngIf="messageError"
+        (close)="onClose()"
+      ></app-alert>
+      <form #f="ngForm" (ngSubmit)="submit(f)">
+        <div
+          class="row"
+          *ngFor="let user of userNameAndLastname; let i = index"
+        >
+          <div class="col-md-6 text-right">
+            <input
+              type="checkbox"
+              name="useri"
+              [(ngModel)]="userNameAndLastname[i].isChecked"
+            />
+          </div>
+          <div class="col-md-6 text-left">
+            <label> {{ user.name }} {{ user.lastname }} </label>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Unesi prisustvo</button>
+      </form>
+    </div>
+  </div>
+</div>

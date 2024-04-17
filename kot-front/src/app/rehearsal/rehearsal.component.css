@@ -1,0 +1,15 @@
+form {
+  text-align: center;
+}
+
+.errorMessage {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  border: red 1px solid;
+  color: crimson;
+}
+
+.btn {
+  margin-top: 20px;
+}

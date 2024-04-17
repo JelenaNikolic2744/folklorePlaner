@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="centar">
+      <app-alert
+        [message]="messageError"
+        *ngIf="messageError"
+        (close)="onClose()"
+      ></app-alert>
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+        <label
+          >Datum<input
+            id="date"
+            formControlName="date"
+            type="date"
+            class="form-control"
+            required /></label
+        ><br />
+        <label
+          >Vreme<input
+            type="text"
+            formControlName="startTime"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Polazak/Dolazak u KOT<input
+            type="text"
+            formControlName="departure"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Mesto<input
+            type="text"
+            formControlName="place"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Grad<input
+            formControlName="city"
+            type="text"
+            class="form-control"
+            required /></label
+        ><br />
+        <br />
+        <br />
+        <div class="buttonHolder">
+          <button class="btn btn-primary" type="submit">Unesi nastup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

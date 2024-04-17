@@ -1,0 +1,16 @@
+table{
+    height: 50px;
+    width: 800px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+td{
+    width: 200px;
+    padding: 5px;
+    border-bottom: 1px black solid;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    text-align: center;
+}

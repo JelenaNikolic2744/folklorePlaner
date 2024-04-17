@@ -1,0 +1,67 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <div *ngIf="loggedIn">
+        <ul *ngIf="admin; else elseBlock" class="nav navbar-nav">
+          <li class="dropdown" appDropdown routerLinkActive="active">
+            <a style="cursor: pointer" class="dropdown-toggle" role="button"
+              >Clanovi<span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a style="cursor: pointer" routerLink="/input-user"
+                  >Unesi novog clana</a
+                >
+              </li>
+              <li>
+                <a style="cursor: pointer" routerLink="/users"
+                  >Prikazi sve clanove</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown" appDropdown routerLinkActive="active">
+            <a style="cursor: pointer" class="dropdown-toggle" role="button"
+              >Nastupi<span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a style="cursor: pointer" routerLink="/input-concert"
+                  >Unesi novi nastup</a
+                >
+              </li>
+              <li>
+                <a style="cursor: pointer" (click)="showConcerts()"
+                  >Prikazi sve nastupe</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              routerLinkActive="active"
+              routerLink="/rehearsal"
+              style="cursor: pointer"
+              >Probe</a
+            >
+          </li>
+        </ul>
+        <ng-template #elseBlock class="nav navbar-nav">
+          <ul class="userNav nav navbar-nav">
+            <a style="cursor: pointer" (click)="showConcerts()"
+              >Prikazi sve nastupe</a
+            >
+          </ul>
+          <ul class="userNav nav navbar-nav">
+            <a style="cursor: pointer" routerLink="/users">Svoji podaci</a>
+          </ul>
+        </ng-template>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a style="cursor: pointer" (click)="onLogout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

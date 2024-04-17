@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="concertTable">
+        <table>
+          <tr>
+            <th colspan="4">PREDSTOJECI NASTUPI</th>
+          </tr>
+          <tr>
+            <th>Datum</th>
+            <th>Vreme</th>
+            <th>Vreme polaska/dolaska u KOT</th>
+            <th>Mesto</th>
+            <th>Grad</th>
+          </tr>
+          <tr *ngFor="let concert of concerts">
+            <td>{{ concert.date }}</td>
+            <td>{{ concert.startTime }}</td>
+            <td>{{ concert.departure }}</td>
+            <td>{{ concert.place }}</td>
+            <td>{{ concert.city }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

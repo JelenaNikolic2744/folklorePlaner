@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="centar">
+      <app-alert
+        [message]="messageError"
+        *ngIf="messageError"
+        (close)="onClose()"
+      ></app-alert>
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+        <label
+          >Prezime<input
+            type="text"
+            formControlName="lastname"
+            class="form-control" /></label
+        ><br />
+
+        <label
+          >Adresa<input
+            type="text"
+            formControlName="address"
+            class="form-control" /></label
+        ><br />
+
+        <label for="cityOfLiving"
+          >Prebivaliste<input
+            type="text"
+            formControlName="cityOfLiving"
+            class="form-control" /></label
+        ><br />
+
+        <label for="phone"
+          >Telefon<input
+            type="number"
+            formControlName="phone"
+            class="form-control" /></label
+        ><br />
+        <br />
+        <div class="buttonHolder">
+          <button class="btn btn-primary" type="submit">Azuriraj clana</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

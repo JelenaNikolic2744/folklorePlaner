@@ -1,0 +1,23 @@
+<div class="c row">
+  <div class="col-sm-12">
+    <div class="border">
+      <form class="form" [formGroup]="form" (ngSubmit)="onInputMoney(form)">
+        <label>Mesec</label><br />
+        <select
+          id="month"
+          class="custom-select"
+          (change)="change($event)"
+          formControlName="month"
+        >
+          <option *ngFor="let m of primMonths" [ngValue]="m">{{ m }}</option>
+        </select>
+
+        <br />
+        <br />
+        <div class="buttonCenter">
+          <button class="btn btn-primary" type="submit">Unesi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

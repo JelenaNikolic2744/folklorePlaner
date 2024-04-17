@@ -1,0 +1,24 @@
+.centar {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.form {
+  display: inline-block;
+  text-align: left;
+}
+
+#date {
+  width: 205px;
+}
+
+.buttonHolder {
+  text-align: center;
+}
+.errorMessage {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  border: red 1px solid;
+  color: crimson;
+}

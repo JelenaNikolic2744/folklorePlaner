@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="centar">
+      <app-alert
+        [message]="messageError"
+        *ngIf="messageError"
+        (close)="onClose()"
+      ></app-alert>
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+        <label
+          >Username<input
+            formControlName="username"
+            type="text"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Password<input
+            formControlName="password"
+            type="password"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Ime<input
+            formControlName="name"
+            type="text"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Prezime<input
+            type="text"
+            formControlName="lastname"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Datum rodjenja<input
+            type="date"
+            id="date"
+            formControlName="birthday"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Adresa<input
+            type="text"
+            formControlName="address"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label
+          >Mesto rodjenja<input
+            type="text"
+            formControlName="cityOfBirth"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label for="cityOfLiving"
+          >Prebivaliste<input
+            type="text"
+            formControlName="cityOfLiving"
+            class="form-control"
+            required /></label
+        ><br />
+
+        <label for="phone"
+          >Telefon<input
+            type="number"
+            formControlName="phone"
+            class="form-control"
+            required /></label
+        ><br />
+        <br />
+        <div class="buttonHolder">
+          <button class="btn btn-primary" type="submit">Unesi clana</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

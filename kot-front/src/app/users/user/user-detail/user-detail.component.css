@@ -1,0 +1,67 @@
+table.details {
+  width: 250px;
+  margin: auto;
+  height: 230px;
+  border: 2px solid black;
+}
+
+table.details td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+table.details th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table.money {
+  margin: auto;
+  border: 2px solid black;
+  width: 180px;
+  height: 20px;
+}
+table.money td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+table.money th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+table.rehearsal {
+  margin: auto;
+  width: fit-content;
+  height: 20px;
+  border: 2px solid black;
+}
+table.rehearsal td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+table.rehearsal th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.moneyDetail button {
+  margin: auto;
+  display: block;
+}
+
+.headDetail {
+  text-align: center;
+}
+.moneyDetail {
+  margin-top: 34px;
+}
+
+.updateUser {
+  align-items: center !important;
+  margin-left: 110px;
+}

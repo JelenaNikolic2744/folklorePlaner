@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row">
+    <div class="zika col-sm-4">
+      <div class="moneyInput">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <div class="pera col-sm-4">
+      <div class="userDetail">
+        <div class="updateUser">
+          <button
+            *ngIf="inputMoneyButton"
+            class="btn btn-primary"
+            (click)="updateUser()"
+          >
+            Azuriraj korisnika
+          </button>
+        </div>
+
+        <br />
+        <br />
+        <table class="details table">
+          <tr>
+            <th colspan="2" class="headDetail">PODACI O CLANU</th>
+          </tr>
+          <tr>
+            <th>Ime</th>
+            <td>{{ userDetail.name }}</td>
+          </tr>
+          <tr>
+            <th>Prezime</th>
+            <td>{{ userDetail.lastname }}</td>
+          </tr>
+          <tr>
+            <th>Datum rodjenja</th>
+            <td>{{ userDetail.birthday }}</td>
+          </tr>
+          <tr>
+            <th>Adresa stanovanja</th>
+            <td>{{ userDetail.address }}</td>
+          </tr>
+          <tr>
+            <th>Mesto rodjenja</th>
+            <td>{{ userDetail.cityOfBirth }}</td>
+          </tr>
+          <tr>
+            <th>Prebivaliste</th>
+            <td>{{ userDetail.cityOfLiving }}</td>
+          </tr>
+          <tr>
+            <th>Broj telefona</th>
+            <td>{{ userDetail.phone }}</td>
+          </tr>
+          <tr>
+            <th>Username</th>
+            <td>{{ userDetail.username }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="moneyDetail">
+        <button
+          *ngIf="inputMoneyButton"
+          class="btn btn-primary"
+          (click)="onInputMoney()"
+        >
+          Unesi clanarinu
+        </button>
+        <br />
+        <table class="money table">
+          <tr>
+            <th colspan="2">PLACENA CLANARINA</th>
+          </tr>
+          <tr>
+            <th>Mesec</th>
+            <th>Godina</th>
+          </tr>
+          <tr *ngFor="let money of userDetail.money">
+            <td>{{ money.paidMonth }}</td>
+            <td>{{ money.paidYear }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="rehearsalDetail">
+        <div></div>
+        <br />
+        <br />
+        <br />
+        <table class="rehearsal table">
+          <tr>
+            <th colspan="2">PRISUSTVO NA PROBAMA</th>
+          </tr>
+          <tr>
+            <th>Datum</th>
+            <th>Prisustvo</th>
+          </tr>
+          <tr *ngFor="let reh of userDetail.rehearsal">
+            <td>{{ reh.date }}</td>
+            <td>{{ reh.attendance }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
